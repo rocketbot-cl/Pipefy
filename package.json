@@ -1,0 +1,257 @@
+{
+    "author": "Danilo Toro",
+    "description": "Module to automate pipefy through its API",
+    "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version": "0.1",
+    "license": "MIT",
+    "homepage": "http://rocketbot.co/",
+    "name": "Pipefy",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": true,
+    "dependencies": {
+        "requests": "2.25.1"
+    },
+    "title": {
+        "en": "Pipefy",
+        "es": "Pipefy"
+    },
+    "icon": "data:image/png;base64,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",
+    "children": [
+        {
+            "title": {
+                "en": "Connect to Pipefy",
+                "es": "Conectar ao pipefy"
+            },
+            "description": {
+                "en": "With this command the authentication against Pipefy is established",
+                "es": "Con este comando se establece la autenticación con Pipefy",
+                "pr": "Com este comando, a autenticação contra o Pipefy é estabelecida"
+            },
+            "form": {
+                "css": "modal-lg",
+                "style": "",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {"en": "account1", "es": "cuenta1", "pr": "conta1"},
+                        "title": {
+                            "en": "Session:",
+                            "es": "Sesión:",
+                            "pr": "Sessão"
+                        },
+                        "id": "session",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "textarea",
+                        "placeholder": "eyJ1c2VyIjp7ImlkIjozMDEzMDY4NzYsImVtYWls.eyJ1c2VyIjp7ImlkIjozMDEzMDY4NzYsImVtYWlseyJ1c2VyIjp7ImlkIjozMDEzMDY4NzYsImVtYWlsIeyJ1c2VyIjp7ImlkIjozMDEzMDY4NzYsImVtYWlseyJ1c2VyIjp7ImlkIjozMDEzMDY4NzYsImVtYWlsa_kYAjHu7vN8k4_KKRcM7hVivhR1sr7RnCA",
+                        "title": {
+                            "en": "Token:",
+                            "es": "Token:",
+                            "pr": "Token"
+                        },
+                        "help": {
+                            "es": "Ve a https://app.pipefy.com/tokens para obtener el token",
+                            "pr": "Acesse https://app.pipefy.com/tokens para obter o token",
+                            "en": "Go to https://app.pipefy.com/tokens to get the token"
+                        },
+                        "description": {
+                            "es": "Token obtenido en https://app.pipefy.com/tokens"
+                        },
+                        "id": "token",
+                        "style": "heigth: 100px;",
+                        "css": "col-md-12"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/png;base64,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",
+            "module": "connect",
+            "module_name": "Pipefy",
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": false,
+            "visible": true,
+            "options": false
+        },
+        {
+            "title": {
+                "en": "Create Card",
+                "es": "Crear Tarjeta",
+                "pr": "Criar Card"
+            },
+            "description": {
+                "en": "With this command can create a card",
+                "es": "Con este comando puedes crear una tarjeta",
+                "pr": "Com este comando pode-se criar uma card"
+            },
+            "form": {
+                "css": "modal-lg",
+                "style": "",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {"en": "account1", "es": "cuenta1", "pr": "conta1"},
+                        "title": {
+                            "en": "Session:",
+                            "es": "Sesión:",
+                            "pr": "Sessão"
+                        },
+                        "id": "session",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {"en": "301741450"},
+                        "title": {
+                            "en": "Pipe Id:"
+                        },
+                        "description": {"en":"Get id from card url"},
+                        "id": "pipe_id",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "en": "[{ 'field_id': 'nome_do_solicitante','field_value': 'Lucas'},{'field_id': 'e_mail_do_solicitante','field_value': 'user@email.com', "
+                        },
+                        "title": {
+                            "en": "Fields Attributes",
+                            "es": "Campo de atributos",
+                            "pr": "Campo de atributo"
+                        },
+                        "description": {"en": "Array of inputs to fill card's fields"},
+                        "id": "fields_attributes",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "file_select",
+                        "placeholder": {
+                            "es": "C:\\User\\Desktop\\test.txt",
+                            "en": "C:\\User\\Desktop\\test.txt",
+                            "pr": "C:\\User\\Desktop\\test.txt"
+                        },
+                        "title": {
+                            "es": "Archivo Adjunto:",
+                            "en": "Attached File:",
+                            "pr": "Arquivo anexo:"
+                        },
+                        "id": "attached_file",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                          "es": "variable",
+                          "en": "variable",
+                          "pr":"variável"
+                        },
+                        "title": {
+                          "es": "Asignar a Variable",
+                          "en": "Assign to Variable",
+                          "pr": "Atribuir à variável"
+                        },
+                        "help": {
+                          "es": "Nombre de variable sin llaves {}",
+                          "en": "Var name without {}",
+                          "pr": "Nome do variável sem {}"
+                        },
+                        "remove_vars": true,
+                        "id": "result",
+                        "css": "col-md-12"
+                      }
+
+                ]
+            },
+            "video_youtube": "",
+"icon": "data:image/png;base64,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",
+            "module": "create_card",
+            "module_name": "Pipefy",
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": false,
+            "visible": true,
+            "options": false
+        },
+        {
+            "title": {
+                "en": "Get Pipe by ID",
+                "es": "Obtener Pipe por ID",
+                "pr": "Obter Pipe por seu ID"
+            },
+            "description": {
+                "en": "With this command you can obtain information about the fields of a pipe from its id",
+                "es": "Con este comando puedes obtener información de los campos de un pipe desde su id",
+                "pr": "Com este comando você pode obter informações sobre os campos de um pipe a partir de seu id"
+            },
+            "form": {
+                "css": "modal-md",
+                "style": "",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {"en": "account1", "es": "cuenta1", "pr": "conta1"},
+                        "title": {
+                            "en": "Session:",
+                            "es": "Sesión:",
+                            "pr": "Sessão"
+                        },
+                        "id": "session",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {"en": "301741450"},
+                        "title": {
+                            "en": "Pipe Id:"
+                        },
+                        "description": {"en":"Get id from card url"},
+                        "id": "pipe_id",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                          "es": "variable",
+                          "en": "variable",
+                          "pr":"variável"
+                        },
+                        "title": {
+                          "es": "Asignar a Variable",
+                          "en": "Assign to Variable",
+                          "pr": "Atribuir à variável"
+                        },
+                        "help": {
+                          "es": "Nombre de variable sin llaves {}",
+                          "en": "Var name without {}",
+                          "pr": "Nome do variável sem {}"
+                        },
+                        "remove_vars": true,
+                        "id": "result",
+                        "css": "col-md-12"
+                      }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/png;base64,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",
+            "module": "get_pipe",
+            "module_name": "Pipefy",
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": false,
+            "visible": true,
+            "options": false
+        }
+    ]
+}

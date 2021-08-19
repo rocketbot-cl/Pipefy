@@ -29,7 +29,7 @@ class Pipefy:
             "pipe_id", str(pipe_id)).replace("options", str(options))
         
         return self.__requests("post", {"query": query})
-
+    
     def create_card(self, pipe_id: int, fields_attributes: list, options: str = "{clientMutationId,card{id}}", upload_attachments: str = "") -> dict:
         fields_without_quote = "["
         for field in fields_attributes:
@@ -41,18 +41,20 @@ class Pipefy:
                       "fields_attributes": fields_without_quote}
         if upload_attachments:
             filenames = self.upload_file(upload_attachments)
+            print("Files to attach",filenames)
             input_args["attachments"] =  filenames
         input_args = removeQuotes(input_args)
         query = "mutation{createCard(input:input_args) options}".replace(
             "input_args", input_args).replace("options", options)
-        
+        print("query", query.replace("'","\""))
         return self.__requests("post", {"query": query})
 
     def upload_files(self, attachments: list):
         filenames = []
         for attachment in attachments:
             if os.path.isfile(attachment):
-                filenames.append(self.upload_files(attachment))
+                filenames.append(self.upload_file(attachment))
+        return filenames
 
     def upload_file(self, file: str) -> str:
         filename = os.path.basename(file)

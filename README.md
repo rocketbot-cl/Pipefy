@@ -15,6 +15,9 @@ With this command can create a card
 3. #### Get Pipe by ID  
 With this command you can obtain information about the fields of a pipe from its id
 
+4. #### Upload file
+With this command you can upload a document to Pipefy and use the result filename in other commands
+
 ----
 ### OS
 

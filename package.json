@@ -2,7 +2,7 @@
     "author": "Danilo Toro",
     "description": "Módulo para trabajar con la plataforma de Pipefy | Module to automate pipefy through its API",
     "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-    "version": "1.0.1",
+    "version": "2.0",
     "license": "MIT",
     "homepage": "http://rocketbot.com/",
     "name": "Pipefy",
@@ -314,6 +314,100 @@
             "video_youtube": "",
             "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUkAAADQCAYAAACKlJOXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAEl9JREFUeNrsnT9sHdeVxu8jrZiSg4hKFETbmNRWbBak3ESFgfeYIqvdRuQ2m7ghGahJE0rYLeJmKaZKgCwopvEKMJZkE8DYQo/N7ipFSAIu7EYikUbNrqhUwsaxqCCWydixdr7h0KH1z5Q4c+65M78fcPFoG/DMu2/mu9+559x7QwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4FC26wB0dugAKtrK2TjcgknVnsGgjWevP2kDxz2HfvwN4HtYLARVrxedm0fb/N0AkXbpACd9wIYS4QojFaiGaG4VwrtIliGQMxrLWLoQRQYQUHOhqIZx7IgqIZOmhs4TxPKIINRLNZZwmIlmGME4UjhGgjmges1sIZpfuQCQPwmQhjDhGaKJgLmZtKZBdhye4xrms3cvaQxqNFm4WhgEn2XA6hWucpCsAnuou57N2JVBi1DhxXMEt0GgHboqyLocG1fc21UmOFGE1840AOEt4ZM5xATdAo5XqLC8iLfXgciAhQ6NVmeCpZWTW26B5R9U69jFWAFTCqbCb+NRc5ftZ26ZL/NNfzDsyytNotu12nVxlXZ3kSOEezzFWAEQxKHuu8nrqX6anpnOPmh8Z5FkFiMrFOryLdSoB0qh1LVDWA+ANlQhNhUTXhNcl3B4pRqwhnkcAdyhh+r3ClK0ikvZMZu2/AplrAO90itB7mXDbDmWvKWQFSAvtLDQaElmpk7JILgQ2pABAKBHJx+gvBHKM5wwAoUQkHxdI1T+yQzgAQolIIpAACCUiiUACgGOhTEUkJZCdOjwJg4ODeRsZGQn9/f1hYGAg/+cn0el0eHUKtra2wvr67nErly5d+vzvuvDSycHQe3Kw+Hvg87/38+cPNsOnH9zZ9/dmHYXyDCL5/CSbxZYQqrXb7VwIEb0S3qJMHM+cOZPs/fcc6w8vD7XDkVdHss/OUwXxoOwJ586t1fzvnVtrqYvnYthdnYNIHpCk6iAlhGNjY7koShDlFKFcNymB3NxMSwSOvnY+F0R9HkYQD8pnD7Zysdy+0U1VNGfD7h4MiOSXMFm4SPducWJiIhfHp4XNUA7j4+Oh201j+a8E8ehrY6Ev+5R7jMknv10PH727lInmckqCOVW4SkTyadoTdtdiu3WMk5OTuTgijDZIHCWSntG84le/Ox2OvT4RXRifxseZUD54dzH/9B44hN1ETvTJZ48iqafrdnB4GptC6Onp6dw1gh0KrxVmK9z2iELpVzJhlDimguYv/9CdzcVS4blTXGS8PYqku0y2xHFmZobESyRGR0fD6uqqu/tS8qX/jbk8EZMqEsg//mo+F0ynLIbIiRxvInk5azNuYv6RkTA3N4c4RuTKlSt5yY+3sPprYzNJOceDOkvNXTok6vykJ5HsFC4yfrzf3587x4sX2WCIMPuLSBw17+h1zvGwKBu+9ctLebLHEXoAVPe12WSR1BPnYpt3ucaFhQUSMg7wlM1WaP31C/+efzYBuUpnIfhq2J2fbKxIuqiHVGiNe/SBp2y23KNa05Cb/PDtH3hylZp3udJEkYweZiu8XllZyecgwUFs5aRoXCH1N350LenEzGFRYud+Fn47mauMEnZ7OC1xLubFJYy3b99GIB0xPz8fXSAVVn/rJzcaLZB7A8WJCwvh6xdcrOvoj6EXsZ3k5RAxm616R80/snzQDxLH06dPR70H1Twef2OutsmZF0VJnd//YtxDXaXmJleb4CT1BE7HurhWzFy7dg2BdMbsbNxkgQRSzgmBfBy56m/++Nce+sbU1sY8LfGtrJ2NJZBykOALFYzHrIlUckbF4fAMwTh+Khz79j/mrvKz+3djGiyz42ljhduDYXfpIQIJf4mhIq6s0ZxbnYrDq0Yh9+9++p2YmW/F/KeDwZLFWOF2lHnIvRU04NNFxhLI1NZde0Aht+pGI4beurBJvV4MJxnFRUogVebDHCQu8lGBPHGByOJFkZOUo4yUzDEpCYrhJM1dpISRLDYu8lG0ew8CeThUKqVa0ohusvLkr3XiRi5y0bon33rrrXDu3DmeaKdMTU2Z10Xq5T75T/8ZWkf6+AEOiTb8UNi9/ZvrMS4/lLWrWduui5M0d5FK1KiBT3RmjbWLdDCfVju06Yd2Y4/kJiudm+wx/jKmu9VqkwoSNb7R6hrzt+qNucZsVGGJpi5eMjjD5wlUGnJbiuRYMN5tnHlI3yjEXlxcNL2m3A6Z7OoceqQ5Xr3klYWLliJpurpGITab5fpmaWmpKS9xY9CqHIXeEahs5LMqATI92EvuUZtW4CJ9ozXalgkbZWEjzZs1CpUD/d+/vBbjZEYVl5d+USsnaRrfaFdxBNI32i/SUiD3zr0GG8d+PM7yzkosrJVITlr1kpI1bJzrn+Vl2yNNlc0GOzQgaWAyppLEcI/RjZvZOrlI8I021bVM2GhVTW+crGujibCbu37k0ssWLETSbNdSuUhqItMItWv+skLYTeJEcJOlT+1ZOUlcJEQJtXGRjXOTpetN1dlts6y2EjX37t3jqUyAVstuX5W/+vn/IpKR0QYYO7dWLS9Zapa7aidp5rUJswm1H0XJAwQyPq/YF++X6iarFkmz+cjp6WmexgRYW1szu9ax1xk4PaAVTsbr5EvVnVo4Se0VqaQN4CT30Bpi6iJ9CaUhpepOlSKp+UiT4WNigrW4KaDicasC8j4Esskhd38osRSoapE0QUfDgn+0LVpNX0r4ErTrkvEOQUmI5DChNuzHaj5S819sheYPY3dfmv4k7yRxkTjJR2Eu0ifGheVJOEmTHmm32zx9iWC1A3mEVR7gb/ByL5Jm8S97RqaB5Y4/R14dpsOdYjgN0h9KShwnLZIIJCIZ+UWE53b5ppFfKQ9C0iKppA2kgVXShlDbN1+xHcBK0aGkRXJ4mLAKvshLJwfoBMcYLxN1LZLHTXqA0p9ksErasFabcLtsqhJJE09NuA2PO0lE0r3o2K3jLkWRe1LubM6xSQerGkmcpH9SS6wlK5K4yLTQkQ0ASTrfiv6/lQ/nuEiAVMPt42ndb6oiCQCE219Cp9HhNgBAyk4SAACRBABAJAEAEMnSod4DAGJTSnFuj+ebA4D6sXPL7MTMUswa4TYAQB1F0mrDBCgH9v6EPT57kNZsXFUiucmjAHFCOQZP73zyW7PZuFJ0qCqRvIObhP2wrR1EcJGl6FDS2W02TUAkH3eSa3S2axe5YXk514kbEz+9sbHBU5cIAwM2O4b/+YNNOtsxxtMhrkuATJ5Uwm2c5KN8molkaomBJmE8iJXyILQqvMGHFr3w8OFDnrxEaLVaJtf5xo+uWZ/xDAfk7j//dT6QWT1ynp1kbvRwk7Afq42SyXD7dZGGAlnalF+VImnSG8vLyzx9iOQjIknyxiPGv0sSImmSVcFJpoPVEcCqwyOB44+Pb3QtL1daGWLy4bYOmNrc5IVIActVN7hJjyJpGvWVpj9ViqTsrkmacX5+nicwkXDb6myij95dosMd8cD+90hCJM3cZLfb5SnETT7iJFcJuZsbapdap121SJrEPAq3FxcXeRIToN1um10LN+kDDVaphtq1cZJiaYkXIgXGxsbMrvXHXzEN44EIg1Wp5qxqkZTtNYl5lOUm0+0frbyxKgXSypsHuMnoRBisSo3te1K74WcxOzvLE4mb/AJ/6PJMxESDlPEy0dL1xkIkzWoxcJNpMDExYXYtrfDATcYjwiBV+uSnlZM0G0pwk4TcuEk/Yfan9hUGpTvJXqMbP5W1sxYXUqbb+iWE52d7eztcv37d5Fp74d7LQx063gj1+e9/8Q/h4Sfb1gJZetjQMrp5KdZNS6dy8+ZNs8JleH60YfKJEyfMrtdzrD986yc3Qu/JQTrf4vf95aUYCZuprC2m6iTvZm2scJQmL+DRo0c5fMoxfX194c6dO/myUgvkaFSvd+zb36PzK0Zr5++9/QNzXc7aDxWklD7AGn4J02Hl8uXLZi8gvBiWCRyhgmbjouZG8qG9QO6F2pXkPnrq8CWe6r2npnhiHSOnb31A2L23p9i5vEKUJDM8DXE/lZUw9Bp+Cdngo3o3rC549+7dfDdswm6/aN7Yck9Qhd1/+p/3wyuvT9D5JaOdlzQIRUCq/GZV//OW8ZeRbbht3YMrKysIpWOUwLE++fKr350O/W/M0fklIXeuoxkiufRKEjYxwm2xWeWXeRrj4+McP+uYixcvml9TmVeKzMvjdz/9TiyBrFxTeiJ8KfPKXgnk6OgoT7JTpqeno5RrqUwl0vxZrVCIHbEfKx/peiN8qa0i7Dat9tb8pEpOLNcNw8FQOdDOzo75klLNT378/juh72/+NvQeP8UP8YIDzUcrV6NdPmvfDxWU/cQWSaHzb8xjLJUEkcjxiVZIXb16NV+Jg1CmgaYr7v/HmzFv4WdZ++86Osm9EUDx1VnrC8utsGwRN4lQHl4gP3w7aondZthN2FQ+qrYifkmJ5O3i05yFhYUwOTnJ0+6M06dPRzvYTUsXv/njX4cjrzKAPgvVQjrYNKTSjLYHJxlChLrJ/ag2D0fpD+u6SRzl86EkjYMd35Ul+qHVxXojf1nFVpOx3KReRuYofaFBa21tLZqblFAqEfHSyUEc5T5U3vPBv/69l2Wd3w9GJx7EDrf3kEKtxLwBhd0Kv8EHSrCdOXMm+n1oVc6JCzwXKu/Remwn5VKLRahtRq+DL60RQUP2UMyXUq7y3LlzbK/mgFOnToX79++H9957L7I4bOTO6WgWfmu+sokotNaOPk6O51XC9++CQbLGm5MMIXIS5/ObyARSjpJaSgdvw9ZWnsTxsFJKAvm1sZl8KWOTwmvNPzrbNWk8GJ6Z5clJhmJk2Mnauag3sb0d3nnnndzFnD17Ni9LgTio74eGhvLfIzaap9z+zfV8A4e+oXbtXaXco3YVl5N2hMQxSkq911EnKLbqhN3VOHFvJAvz9HIq+60XFeKgvt/Y2Ai3bt1ycT8KOfcyu0rqtI7UaxDVICBxVA2k8bELBwmzR63DbG/htquwez/KfCsEt973EPyF3ftR9lsh+LEabLkm8dfyQscbEkcJs72KpNCE4DVvN6UM+MzMDGIZI87qdvOdnDySsljKOT54dzF85Hs3pCtZuxTzBlpOO0Yb/V30eGMSS+1aQxG6sZXIRFJi6RXNUyqxo7Ih74eNKZyWMO7cWvX+s6vmKHotWMtxB+l0RbdKpDBcZ7QoE07ZUHPD7idx9LXzmbOczD+9oBpHCaMEMpHjK3STp4PxkS+piaS7+ckn3mQmkBLK8+fP58KJYFaHNr9IaV9QuUsJpc777ss+LbPiEkKF09s3uvnnpz7qHJ9HIEcLJxmdlvPOkpNc8S6U+5FgttvtXDAJyctndnY2PwkzRZQRf3monYvmV14dLjUsl1NUyc6fsk+JYuKbCZttXlEHkRSTWUt2bdieWA4PD3++oQZu83BoyWJdjguWYO5+tvNPJYKeJZ5784hyihLF3c9a7a7uSiBTEcnkhfKJFnmfWJa5wYZcrAXagEI7vVuh66nF2G8SzIieyU5ZJIXbjDcAHJrFYLxxxUHpTagTr4cIZ+MAQHMFMjWRFMsIJQACiUgilABNQPOPb3q/yd5EO1dCeT9E3jUIAF4Yucd/S+FGexPuZO0apPQqmz8CpMPexrndVG64VYNO74TdDTEoPgTwzXrhIJMq7OypQcevBkdLmADgiXRTfU97a/ID3M2atrDWOaAkdAB8calo2ynefG+Nfgj9AHsJnbNZ4+wFgLhsFu6xm/KX6KnhD3OF8BvAxXt4pg7vYW9NfyCF31fDbmKqw/MKYOoex4v3b7sOX6jVgB9tMOxujoFYAlSHSnt0StpluiJdVE+pTXwf0mi0UttCcHDKKZSHRrp7PNg02qHbChFafelHLGk0xBEQSxqtzHYNcWw2k2H3hEZeBhrtL+1e0+ccW2jjY2jFznSR6GE9ODQV1TcqW61C8K0mdwQi+WwklOcRTGgIm4Uozhd/AyL5QoLZCZQ7QP2EcSmwSg2RLDkkl1i2i09cJqSCQufVrK0V4ohjRCRNGCyEc6QQzhGEExw5xfVCFFdxi4ikJ/oLsRws2sC+ML1D90DJrBcuca34XC9EERDJ5Ok8Q2APwnAE17rGzxZdDMM+MQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgGT4fwEGAFbn4aOc9zL7AAAAAElFTkSuQmCC",
             "module": "get_pipe",
+            "module_name": "Pipefy",
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": false,
+            "visible": true,
+            "options": false
+        },
+        {
+            "title": {
+                "en": "Upload file",
+                "es": "Subir archivo",
+                "pr": "Subir arquivo"
+            },
+            "description": {
+                "en": "With this command you can upload a document to Pipefy and use the result filename in other commands",
+                "es": "Con este comando puedes subir un arhcivo a Pipefy y usar el nombre de archivo resultante en otro comando",
+                "pr": "Com este comando você pode enviar um documento para pipefy e usar o nome do arquivo do resultado em outros comandos"
+            },
+            "form": {
+                "css": "modal-lg",
+                "style": "",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "en": "account1",
+                            "es": "cuenta1",
+                            "pr": "conta1"
+                        },
+                        "title": {
+                            "en": "Session:",
+                            "es": "Sesión:",
+                            "pr": "Sessão"
+                        },
+                        "description": {
+                            "es": "Identificador para cuando conectas con más de una cuenta",
+                            "en": "Identifier for when you connect with more than one account"
+                        },
+                        "id": "session",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "variable",
+                            "en": "variable",
+                            "pr": "variável"
+                        },
+                        "title": {
+                            "es": "Asignar a Variable",
+                            "en": "Assign to Variable",
+                            "pr": "Atribuir à variável"
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin llaves {}",
+                            "en": "Var name without {}",
+                            "pr": "Nome do variável sem {}"
+                        },
+                        "description": {
+                            "es": "Nombre de variable sin llaves {}",
+                            "en": "Var name without {}",
+                            "pr": "Nome do variável sem {}"
+                        },
+                        "remove_vars": true,
+                        "id": "result",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "file_select",
+                        "placeholder": {
+                            "es": "C:\\User\\Desktop\\test.txt",
+                            "en": "C:\\User\\Desktop\\test.txt",
+                            "pr": "C:\\User\\Desktop\\test.txt"
+                        },
+                        "title": {
+                            "es": "Archivo Adjunto:",
+                            "en": "Attached File:",
+                            "pr": "Arquivo anexo:"
+                        },
+                        "description": {
+                            "es": "Ruta del archivo que se quiere adjuntar a la card",
+                            "en": "Path of the file to be attached to the card"
+                        },
+                        "id": "attached_file",
+                        "css": "col-md-12"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/png;base64,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",
+            "module": "upload_file",
             "module_name": "Pipefy",
             "father": "module",
             "group": "scripts",

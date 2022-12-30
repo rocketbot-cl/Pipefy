@@ -25,6 +25,9 @@ With this command you can obtain information about the fields of a pipe from its
 
 
 
+4. #### Upload file
+With this command you can upload a document to Pipefy and use the result filename in other commands
+
 ----
 ### OS
 

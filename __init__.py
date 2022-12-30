@@ -55,6 +55,7 @@ try:
     if module == "connect":
         token = GetParams("token")
         pipe = Pipefy(token)
+        print(pipe)
         
         mod_pipefy_sessions[session] = {"pipe": pipe}
 
@@ -65,8 +66,11 @@ try:
         fields_attributes = GetParams("fields_attributes")
         result = GetParams("result")
 
-        if attached_file is None:
-            attached_file = ""
+        if not attached_file:
+            attached_file = "''"
+
+        attached_file = eval(attached_file)
+        
         
         if "pipe" not in mod_pipefy_sessions[session]:
             raise Exception("Execute connect command")
@@ -82,6 +86,15 @@ try:
         options = "{start_form_fields{id,label},phases{name,id,fields{type,id,label}},labels{id,name}}"
         pipe = mod_pipefy_sessions[session]["pipe"]
         res = pipe.get_pipe_by_id(pipe_id, options)
+        SetVar(result, res)
+
+
+    if module == "upload_file":
+        attached_file = GetParams("attached_file")
+        result = GetParams("result")
+
+        pipe = mod_pipefy_sessions[session]["pipe"]
+        res = pipe.upload_file(attached_file)
         SetVar(result, res)
 
 

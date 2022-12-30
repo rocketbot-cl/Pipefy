@@ -1,26 +1,26 @@
 # Pipefy
   
-Module to automate pipefy through its API  
+Módulo para automatizar Pipefy a través de su API  
 
 *Read this in other languages: [English](README.md), [Español](README.es.md), [Portugues](README.pr.md).*
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Connect to Pipefy  
-With this command the authentication against Pipefy is established
+1. Conectar a pipefy  
+Con este comando se establece la autenticación con Pipefy
 
-2. Create Card  
-With this command can create a card
+2. Crear Tarjeta  
+Con este comando puedes crear una tarjeta
 
-3. Get Pipe by ID  
-With this command you can obtain information about the fields of a pipe from its id  
+3. Obtener Pipe por ID  
+Con este comando puedes obtener información de los campos de un pipe desde su id  
 
 
 

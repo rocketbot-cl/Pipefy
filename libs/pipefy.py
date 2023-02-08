@@ -30,7 +30,7 @@ class Pipefy:
         
         return self.__requests("post", {"query": query})
     
-    def create_card(self, pipe_id: int, fields_attributes: list, options: str = "{clientMutationId,card{id}}", upload_attachments: str = "") -> dict:
+    def create_card(self, pipe_id: int, fields_attributes: list, title: str = "Draft",  options: str = "{clientMutationId,card{id}}", upload_attachments: str = "") -> dict:
         fields_without_quote = "["
         for field in fields_attributes:
             fields_without_quote += removeQuotes(field) + ","
@@ -38,7 +38,9 @@ class Pipefy:
 
         
         input_args = {"pipe_id": pipe_id,
-                      "fields_attributes": fields_without_quote}
+                      "fields_attributes": fields_without_quote,
+                      "title": title
+                      }
         if upload_attachments:
             filenames = self.upload_file(upload_attachments)
             print("Files to attach",filenames)
@@ -71,4 +73,10 @@ class Pipefy:
         }
         response = requests.request(
             method, self.api_url, json=query, headers=headers)
+        print(response)
         return response.json()
+
+    # def delete_card(self, card_id):
+    #     query = "mutation{deleteCard(input:{card_id}) {success}}".replace("{card_id}", "{id: " + str(card_id) + "}")
+    #     print(query)
+    #     return self.__requests("post", query)

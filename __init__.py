@@ -19,7 +19,7 @@ Para obtener la Opcion seleccionada:
 
 
 Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
-    
+
    sudo pip install <package> -t .
 
 """
@@ -32,6 +32,7 @@ if cur_path not in sys.path:
     sys.path.append(cur_path)
 
 
+import traceback
 from pipefy import Pipefy
 
 # Globals declared here
@@ -62,20 +63,28 @@ try:
     if module == "create_card":
         
         pipe_id = GetParams("pipe_id")
+        title = GetParams("title")
         attached_file = GetParams("attached_file")
         fields_attributes = GetParams("fields_attributes")
         result = GetParams("result")
 
         if not attached_file:
             attached_file = "''"
-
+        
         attached_file = eval(attached_file)
+        
+        resultado = []
+        for atributo in eval(fields_attributes):
+            atributo['field_id'] = atributo['field_id'].lower()
+            resultado.append(atributo)
+            
+        print(resultado)
         
         
         if "pipe" not in mod_pipefy_sessions[session]:
             raise Exception("Execute connect command")
         pipe = mod_pipefy_sessions[session]["pipe"]
-        res = pipe.create_card(pipe_id, eval(fields_attributes), upload_attachments=attached_file)
+        res = pipe.create_card(pipe_id, resultado, title=title, upload_attachments=attached_file)
         SetVar(result, res)
 
     if module == "get_pipe":
@@ -96,8 +105,18 @@ try:
         pipe = mod_pipefy_sessions[session]["pipe"]
         res = pipe.upload_file(attached_file)
         SetVar(result, res)
+        
+    # if module == "delete_card":
+    #     card_id = GetParams("card_id")
+    #     result = GetParams("result")
+
+    #     pipe = mod_pipefy_sessions[session]["pipe"]
+    #     res = pipe.delete_card(card_id)
+    #     print(res)
+    #     SetVar(result, res)
 
 
 except Exception as e:
+    traceback.print_exc()
     PrintException()
     raise e

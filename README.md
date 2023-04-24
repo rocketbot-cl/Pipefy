@@ -1,35 +1,42 @@
 # Pipefy
   
-Module to automate pipefy through its API  
+Module to automate pipefy through its API. It allows you to create cards, move them, edit them, etc.  
 
-*Read this in other languages: [English](README.md), [Español](README.es.md), [Portugues](README.pr.md).*
+*Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
 
 ## How to install this module
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
-
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
 
 ## Overview
 
 
 1. Connect to Pipefy  
-With this command the authentication against Pipefy is established
+With this command you can establish the authentication with Pipefy
 
-2. Create Card  
+2. Get Pipe by ID  
+With this command you can obtain information about the fields of a pipe from its id
+
+3. Create Card  
 With this command can create a card
 
-3. Get Pipe by ID  
-With this command you can obtain information about the fields of a pipe from its id  
+4. Upload file  
+With this command you can upload a document to the Pipefy servers, it returns the URL of the file uploaded
+
+5. Update Card  
+With this command you can update a card
+
+6. Move card  
+With this command you can move a card from one phase to another inside a pipe. You can obtain the phase ID 'Get Pipe by ID' command.
+
+7. Delete card  
+With this command you can delete a card from Pipefy  
 
 
 
-
-4. #### Upload file
-With this command you can upload a document to Pipefy and use the result filename in other commands
-
-4. #### Upload file
-With this command you can upload a document to Pipefy and use the result filename in other commands
 
 ----
 ### OS

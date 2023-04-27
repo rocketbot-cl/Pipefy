@@ -119,7 +119,7 @@ try:
         result = GetParams("result")
 
         pipe = mod_pipefy_sessions[session]["pipe"]
-        res = pipe.upload_file(attached_file)
+        res = pipe.upload_file_direct(attached_file)
         SetVar(result, res)
         
     if module == "move_card":

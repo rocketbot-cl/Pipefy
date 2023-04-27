@@ -92,6 +92,15 @@ class Pipefy:
         response = request.json()
         print(response)
         res = requests.request("put", response["signedUrl"], data=open(file, 'rb'))
+        result = response["filename"]
+        return result
+    
+    def upload_file_direct(self, file: str) -> str:
+        filename = os.path.basename(file)
+        url = f"https://app.pipefy.com/upload_attachments/new?objectName={filename}"
+        request = requests.request("get", url)
+        response = request.json()
+        res = requests.request("put", response["signedUrl"], data=open(file, 'rb'))
         result = response["baseUrl"] + '/' + response["filename"]
         return result
 

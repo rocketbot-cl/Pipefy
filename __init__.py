@@ -99,9 +99,16 @@ try:
 
         if "pipe" not in mod_pipefy_sessions[session]:
             raise Exception("Execute connect command")
+        
         pipe = mod_pipefy_sessions[session]["pipe"]
         res = pipe.create_card(pipe_id, resultado, title=title, upload_attachments=attached_file)
         SetVar(result, res)
+        
+        if res.get("errors"):
+            raise Exception(res.get("errors"))
+        
+
+        
 
     if module == "get_pipe":
 
@@ -110,8 +117,15 @@ try:
 
         options = "{start_form_fields{id,label},phases{name,id,fields{type,id,label}},labels{id,name}}"
         pipe = mod_pipefy_sessions[session]["pipe"]
+        
+        if "pipe" not in mod_pipefy_sessions[session]:
+            raise Exception("Execute connect command")
+        
         res = pipe.get_pipe_by_id(pipe_id, options)
         SetVar(result, res)
+
+        if res.get("errors"):
+            raise Exception(res.get("errors"))
 
 
     if module == "upload_file":
@@ -119,8 +133,15 @@ try:
         result = GetParams("result")
 
         pipe = mod_pipefy_sessions[session]["pipe"]
+        
+        if "pipe" not in mod_pipefy_sessions[session]:
+            raise Exception("Execute connect command")
+        
         res = pipe.upload_file_direct(attached_file)
         SetVar(result, res)
+
+        if res.get("errors"):
+            raise Exception(res.get("errors"))
         
     if module == "move_card":
         card_id = GetParams("card_id")
@@ -129,14 +150,18 @@ try:
         
         pipe = mod_pipefy_sessions[session]["pipe"]
         
+        if "pipe" not in mod_pipefy_sessions[session]:
+            raise Exception("Execute connect command")
+        
         res = pipe.move_card_to_phase(card_id, destination_phase_id)
 
+
         try:
-            print(res)
             if res.get("errors"):
                 raise Exception(res.get("errors"))
             else:
                 SetVar(result, res.get("data").get("moveCardToPhase").get("card"))
+
         except Exception as e:
             SetVar(result, False)
             PrintException()
@@ -147,6 +172,10 @@ try:
         result = GetParams("result")
 
         pipe = mod_pipefy_sessions[session]["pipe"]
+        
+        if "pipe" not in mod_pipefy_sessions[session]:
+            raise Exception("Execute connect command")
+        
         res = pipe.delete_card(card_id)
         try:
             if res.get("errors"):
@@ -167,14 +196,19 @@ try:
         result = GetParams("result")
 
         pipe = mod_pipefy_sessions[session]["pipe"]
+        
+        if "pipe" not in mod_pipefy_sessions[session]:
+            raise Exception("Execute connect command")
+        
         res = pipe.update_card(card_id, title, due_date, asignee_ids, label_ids)
 
-        print(res)
+
         try:
             if res.get("errors"):
                 raise Exception(res.get("errors"))
             else:
                 SetVar(result, res)
+
         except Exception as e:
             SetVar(result, False)
             PrintException()

@@ -70,12 +70,11 @@ class Pipefy:
                       }
         if upload_attachments:
             filenames = self.upload_file(upload_attachments)
-            print("Files to attach",filenames)
+            print("Files to attach: ",filenames)
             input_args["attachments"] =  filenames
         input_args = removeQuotes(input_args)
         query = "mutation{createCard(input:input_args) options}".replace(
             "input_args", input_args).replace("options", options)
-        print("query", query.replace("'","\""))
         return self.__requests("post", {"query": query})
 
     def upload_files(self, attachments: list):
@@ -90,7 +89,6 @@ class Pipefy:
         url = f"https://app.pipefy.com/upload_attachments/new?objectName={filename}"
         request = requests.request("get", url)
         response = request.json()
-        print(response)
         res = requests.request("put", response["signedUrl"], data=open(file, 'rb'))
         result = response["filename"]
         return result

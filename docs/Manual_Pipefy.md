@@ -1,10 +1,14 @@
+
+
+
+
 # Pipefy
   
 Module to automate pipefy through its API. It allows you to create cards, move them, edit them, etc.  
 
 *Read this in other languages: [English](Manual_Pipefy.md), [Português](Manual_Pipefy.pr.md), [Español](Manual_Pipefy.es.md)*
   
-![banner](imgs/Banner_Pipefy.png)
+![banner](imgs/Banner_Pipefy.png o jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -71,6 +75,7 @@ With this command you can update a card
 With this command you can move a card from one phase to another inside a pipe. You can obtain the phase ID 'Get Pipe by ID' command.
 |Parameters|Description|example|
 | --- | --- | --- |
+|Session|Identifier for when you connect with more than one account|account1|
 |Card ID|Card ID to move|643648856|
 |Phase ID|Phase ID to move the card|643648856|
 |Assign to Variable|Var name without {}|variable|
@@ -80,5 +85,6 @@ With this command you can move a card from one phase to another inside a pipe. Y
 With this command you can delete a card from Pipefy
 |Parameters|Description|example|
 | --- | --- | --- |
+|Session|Identifier for when you connect with more than one account|account1|
 |Card ID|Card ID to delete|643648856|
 |Assign to Variable|Var name without {}|variable|

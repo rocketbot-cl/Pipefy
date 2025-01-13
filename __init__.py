@@ -40,6 +40,7 @@ PrintException = PrintException #pylint: disable=undefined-variable,self-assigni
 
 import traceback
 from pipefy import Pipefy
+import requests
 
 # Globals declared here
 global mod_pipefy_sessions
@@ -60,22 +61,37 @@ if not session:
 
 try:
     if module == "connect":
+
+        # if conecting to pipefy is successful, save the pipe object in the session
+        def check_connection(token) -> bool:
+            headers = { "Authorization": f"Bearer {token}"}
+            url = "https://api.pipefy.com/graphql"
+            query = "{ pipes { edges { node { id } } } }"
+
+            response = requests.post(url, headers=headers, json={"query": query})
+
+            if response.status_code == 200:
+                return True
+            else:
+                return False
+
         token = GetParams("token")
         result = GetParams("result")
 
         try:
 
-            pipe = Pipefy(token)
-            SetVar(result, pipe.valid)
+            if check_connection(token):
+                pipe = Pipefy(token)
+                mod_pipefy_sessions[session]["pipe"] = pipe
+                SetVar(result, True)
+            else:
+                SetVar(result, False)
+                raise Exception("Invalid token")
 
-            mod_pipefy_sessions[session] = {"pipe": pipe}
-
-            if not pipe.valid:
-                raise Exception("Invalid Token.")
 
         except Exception as e:
             PrintException()
-            SetVar(result, pipe.valid)
+            SetVar(result, False)
             raise e
 
     if module == "create_card":

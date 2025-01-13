@@ -1,10 +1,14 @@
+
+
+
+
 # Pipefy
   
 Módulo para automatizar pipefy a través de su API. Permite crear tarjetas, moverlas, editarlas, etc.  
 
 *Read this in other languages: [English](Manual_Pipefy.md), [Português](Manual_Pipefy.pr.md), [Español](Manual_Pipefy.es.md)*
   
-![banner](imgs/Banner_Pipefy.png)
+![banner](imgs/Banner_Pipefy.png o jpg)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
@@ -71,6 +75,7 @@ Con este comando puedes actualizar una tarjeta
 Con este comando puedes mover una tarjeta de una fase a otra dentro de un pipe. Puedes obtener el ID de la fase con el comando 'Obtener Pipe por ID'
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
+|Sesión|Identificador para cuando conectas con más de una cuenta|cuenta1|
 |ID de la tarjeta|Identificador de la tarjeta que quieres mover|643648856|
 |ID de la fase|Identificador de la fase a la que quieres mover la tarjeta|643648856|
 |Asignar a Variable|Nombre de variable sin llaves {}|variable|
@@ -80,5 +85,6 @@ Con este comando puedes mover una tarjeta de una fase a otra dentro de un pipe. 
 Con este comando puedes eliminar una tarjeta de Pipefy
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
+|Sesión|Identificador para cuando conectas con más de una cuenta|cuenta1|
 |ID de la tarjeta|Identificador de la tarjeta que quieres eliminar|643648856|
 |Asignar a Variable|Nombre de variable sin llaves {}|variable|

@@ -1,3 +1,7 @@
+
+
+
+
 # Pipefy
   
 Módulo para automatizar pipefy a través de su API. Permite crear tarjetas, moverlas, editarlas, etc.  
@@ -50,5 +54,5 @@ Con este comando puedes eliminar una tarjeta de Pipefy
 - [**requests**](https://pypi.org/project/requests/)
 ### License
   
-![MIT](https://camo.githubusercontent.com/107590fac8cbd65071396bb4d04040f76cde5bde/687474703a2f2f696d672e736869656c64732e696f2f3a6c6963656e73652d6d69742d626c75652e7376673f7374796c653d666c61742d737175617265)  
-[MIT](http://opensource.org/licenses/mit-license.ph)
+![MIT](https://img.shields.io/github/license/instaloader/instaloader.svg)  
+[MIT](https://opensource.org/license/mit)
